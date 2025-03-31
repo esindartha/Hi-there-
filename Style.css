@@ -1,123 +1,157 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f7f1f1; /* Light gray background */
-    color: #333; /* Dark gray text */
+    background-color: #f8e0e6; /* More pastel pink */
+    color: #333;
     margin: 0;
     padding: 0;
-    /* text-align: center;  Removed for more controlled centering */
+    text-align: center; /* Centers all inline content */
     font-size: 16px;
-    line-height: 1.6; /* Improves readability */
 }
 
 /* Header Section */
 header {
-    background-color: #e6b8af; /* Peachy color */
+    background-color: #f8e0e6; /* Pastel pink */
     padding: 30px;
-    color: #663344; /* Darker, harmonious text color */
-    text-align: center; /* Center header text */
+    color: #8f4d6d;
+    margin-bottom: 20px;
+}
+
+header h1, header h2 { /* Centering h1 and h2 */
+    text-align: center;
+    margin: 0 auto; /* Centers block-level elements */
 }
 
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    font-weight: bold; /* Added boldness */
 }
 
 header h2 {
     font-size: 1.8rem;
     margin-bottom: 10px;
-    font-style: italic; /* Added italic style */
 }
 
 header p {
     font-size: 1rem;
     margin: 0;
+    text-align: center;
 }
 
 /* Main Section */
 main {
     padding: 20px;
-    max-width: 800px; /* Added max-width for better centering */
-    margin: 0 auto; /* Center the main content */
-}
-
-/* My Photo */
-#my-photo {
-    text-align: center; /* Center the image */
     margin-bottom: 20px;
 }
 
+/* Flexbox Layout for Responsive Design */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px;
+}
+
+/* My Photo */
 #my-photo img {
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 300px; /* Set a maximum width for the image */
-    display: block; /* Prevents extra space below the image */
+    max-width: 100%;
+    display: block; /* Makes it a block element for better centering */
+    margin: 0 auto; /* Centers the image */
 }
 
 /* Café Section */
 h3 {
-    color: #663344; /* Darker, harmonious text color */
+    color: #8f4d6d;
     font-size: 1.6rem;
-    text-align: center; /* Center the cafe section title */
-    margin-bottom: 20px;
+    text-align: center;
 }
 
 .cafe-images {
     display: flex;
-    flex-wrap: wrap; /* Allows images to wrap to next line if necessary */
-    justify-content: center;
+    justify-content: center; /* Centers images horizontally */
     gap: 15px;
+    margin-bottom: 20px;
 }
 
 .cafe-images img {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 200px; /* Adjust as needed */
-    width: 100%; /* Ensures images take up available width */
-}
+    max-width: 100%;
+    display: block; /* Makes it a block element for better centering */
+    margin: 0 auto; /* Centers the image */
 
+}
 
 /* Paragraphs */
 p {
     font-size: 1rem;
     line-height: 1.6;
-    text-align: justify; /* Justify text for better readability */
+    max-width: 600px;
+    margin: 0 auto; /* Centers paragraphs */
 }
 
 /* Footer Section */
 footer {
-    background-color: #e6b8af; /* Matching header color */
+    background-color: #f8e0e6; /* Pastel pink */
     padding: 20px;
-    color: #663344;
-    text-align: center; /* Center footer content */
+    color: #8f4d6d;
+    text-align: center;
 }
 
 /* Footer Links */
 footer a {
     text-decoration: none;
-    color: #663344;
+    color: #8f4d6d;
     font-weight: bold;
     margin: 0 10px;
 }
 
 footer a:hover {
-    color: #996677; /* Slightly darker shade on hover */
+    color: #d16f87;
 }
 
 /* Footer Paragraph */
 footer p {
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
-/* Mobile Responsiveness -  (Keep existing media queries, but consider refining breakpoints) */
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cafe-images {
+        flex-direction: column;
+    }
+}
+
 
 /* Accessibility: Focus Styles for Links */
 footer a:focus {
-    outline: 2px solid #996677;
+    outline: 2px solid #d16f87;
 }
 
-/* Box Model */
+/* Box Model: Ensuring consistent box-sizing */
 *, *::before, *::after {
     box-sizing: border-box;
 }
