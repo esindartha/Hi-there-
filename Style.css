@@ -1,25 +1,25 @@
 /* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8e0e6; /* More pastel pink */
-    color: #333;
+* {
     margin: 0;
     padding: 0;
-    text-align: center; /* Centers all inline content */
-    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Ensure Arial and sans-serif are used */
+    background-color: #f8d7e6; /* Subtle pink background */
+    color: #333; /* Dark grey font color */
+    text-align: center; /* Center text by default */
 }
 
 /* Header Section */
 header {
-    background-color: #f8e0e6; /* Pastel pink */
-    padding: 30px;
-    color: #8f4d6d;
-    margin-bottom: 20px;
+    padding: 40px;
+    background-color: #f2d1d1; /* Soft pink header */
 }
 
-header h1, header h2 { /* Centering h1 and h2 */
-    text-align: center;
-    margin: 0 auto; /* Centers block-level elements */
+header h1, header h2 {
+    color: #333; /* Dark grey color for the header text */
 }
 
 header h1 {
@@ -32,109 +32,82 @@ header h2 {
     margin-bottom: 10px;
 }
 
-header p {
-    font-size: 1rem;
-    margin: 0;
-    text-align: center;
-}
-
-/* Main Section */
+/* Main Content */
 main {
     padding: 20px;
-    margin-bottom: 20px;
 }
 
-/* Flexbox Layout for Responsive Design */
 .flex-container {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: center; /* Centers items horizontally */
-    gap: 20px;
+    gap: 30px; /* Add space between the sections */
 }
 
-/* My Photo */
+/* Profile Image */
 #my-photo img {
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-    display: block; /* Makes it a block element for better centering */
-    margin: 0 auto; /* Centers the image */
-}
-
-/* Café Section */
-h3 {
-    color: #8f4d6d;
-    font-size: 1.6rem;
-    text-align: center;
-}
-
-.cafe-images {
-    display: flex;
-    justify-content: center; /* Centers images horizontally */
-    gap: 15px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
     margin-bottom: 20px;
 }
 
-.cafe-images img {
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-    display: block; /* Makes it a block element for better centering */
-    margin: 0 auto; /* Centers the image */
+/* Café Sections */
+h3 {
+    text-align: center; /* Centered café titles */
+    font-size: 1.8rem;
+    color: #8f4d6d; /* Subtle pink color for café titles */
+    margin-top: 20px;
+}
 
+/* Café Image Styling */
+.cafe-images img {
+    width: 250px; /* Café images smaller than the main photo */
+    border: 15px solid white; /* White border around images */
+    margin: 10px;
+}
+
+/* Gaps Between Café Images */
+.cafe-images {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Gap between café images */
 }
 
 /* Paragraphs */
 p {
     font-size: 1rem;
     line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto; /* Centers paragraphs */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Footer Section */
 footer {
-    background-color: #f8e0e6; /* Pastel pink */
+    background-color: #f2d1d1; /* Soft pink footer */
     padding: 20px;
-    color: #8f4d6d;
-    text-align: center;
+    color: #333;
 }
 
-/* Footer Links */
 footer a {
     text-decoration: none;
-    color: #8f4d6d;
+    color: #8f4d6d; /* Subtle pink color for links */
     font-weight: bold;
     margin: 0 10px;
 }
 
 footer a:hover {
-    color: #d16f87;
+    color: #d16f87; /* Darker pink color on hover */
 }
 
-/* Footer Paragraph */
 footer p {
     font-size: 1rem;
 }
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header h2 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-
     .flex-container {
         flex-direction: column;
         align-items: center;
@@ -143,15 +116,4 @@ footer p {
     .cafe-images {
         flex-direction: column;
     }
-}
-
-
-/* Accessibility: Focus Styles for Links */
-footer a:focus {
-    outline: 2px solid #d16f87;
-}
-
-/* Box Model: Ensuring consistent box-sizing */
-*, *::before, *::after {
-    box-sizing: border-box;
 }
