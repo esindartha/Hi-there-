@@ -12,6 +12,10 @@ body {
     text-align: center; /* Center text by default */
 }
 
+/* Troubleshooting Tip: Ensure the background color is applied correctly to the body element. 
+   If not, check the link to the stylesheet and ensure it is correctly linked in the HTML file.
+   Also, check if any other CSS files or inline styles are overriding this rule. */
+
 /* Header Section */
 header {
     padding: 40px;
@@ -84,6 +88,9 @@ p {
     margin-right: auto;
 }
 
+/* Troubleshooting Tip: Ensure there are no inline styles or external CSS overriding your text color and font settings.
+   If you still don't see changes, try adding !important to your CSS properties, e.g., `color: #333 !important;`. */
+
 /* Footer Section */
 footer {
     background-color: #f2d1d1; /* Soft pink footer */
@@ -117,3 +124,6 @@ footer p {
         flex-direction: column;
     }
 }
+
+/* Troubleshooting Tip: Check if your website isn't showing the pink background due to caching.
+   Try clearing the browser cache or open the site in Incognito/Private mode to avoid cache issues. */
