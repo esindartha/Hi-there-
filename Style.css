@@ -6,15 +6,12 @@
 }
 
 body {
-    font-family: Arial, sans-serif; /* Ensure Arial and sans-serif are used */
+    font-family: "Lora", serif; /* Font changed to Lora */
     background-color: #f8d7e6; /* Subtle pink background */
     color: #333; /* Dark grey font color */
-    text-align: center; /* Center text by default */
+    text-align: center;
+    line-height: 1.6;
 }
-
-/* Troubleshooting Tip: Ensure the background color is applied correctly to the body element. 
-   If not, check the link to the stylesheet and ensure it is correctly linked in the HTML file.
-   Also, check if any other CSS files or inline styles are overriding this rule. */
 
 /* Header Section */
 header {
@@ -22,8 +19,12 @@ header {
     background-color: #f2d1d1; /* Soft pink header */
 }
 
+/* Title and Subheader */
 header h1, header h2 {
     color: #333; /* Dark grey color for the header text */
+    text-align: center;
+    max-width: 80%; /* Limit width to ensure alignment */
+    margin: 0 auto; /* Centering the header */
 }
 
 header h1 {
@@ -34,6 +35,7 @@ header h1 {
 header h2 {
     font-size: 1.8rem;
     margin-bottom: 10px;
+    line-height: 1.4; /* Adjust line height for better readability */
 }
 
 /* Main Content */
@@ -45,7 +47,8 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 30px; /* Add space between the sections */
+    gap: 30px;
+    width: 100%;
 }
 
 /* Profile Image */
@@ -59,16 +62,16 @@ main {
 
 /* Café Sections */
 h3 {
-    text-align: center; /* Centered café titles */
+    text-align: center;
     font-size: 1.8rem;
-    color: #8f4d6d; /* Subtle pink color for café titles */
+    color: #8f4d6d;
     margin-top: 20px;
 }
 
 /* Café Image Styling */
 .cafe-images img {
-    width: 250px; /* Café images smaller than the main photo */
-    border: 15px solid white; /* White border around images */
+    width: 250px;
+    border: 15px solid white;
     margin: 10px;
 }
 
@@ -76,54 +79,72 @@ h3 {
 .cafe-images {
     display: flex;
     justify-content: center;
-    gap: 50px; /* Gap between café images */
+    gap: 50px;
 }
 
-/* Paragraphs */
-p {
+/* Paragraphs (For Subheader and Main Paragraph) */
+p, .intro-paragraph {
     font-size: 1rem;
+    max-width: 80%; /* Set maximum width */
+    margin: 20px auto; /* Center-align and add space between paragraphs */
     line-height: 1.6;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: justify; /* Justify alignment for better readability */
 }
 
-/* Troubleshooting Tip: Ensure there are no inline styles or external CSS overriding your text color and font settings.
-   If you still don't see changes, try adding !important to your CSS properties, e.g., `color: #333 !important;`. */
+/* Accordion Style */
+.accordion {
+    background-color: #f8d7e6;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.accordion:hover {
+    background-color: #e6c6d1;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f2d1d1;
+    border-radius: 5px;
+}
+
+/* Social Media Icons */
+.social-icon {
+    font-size: 30px; /* Adjust size of icons */
+    color: #8f4d6d; /* Subtle pink color */
+    margin: 0 10px; /* Add space between icons */
+    transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+.social-icon:hover {
+    color: #d16f87; /* Darker pink on hover */
+}
 
 /* Footer Section */
 footer {
-    background-color: #f2d1d1; /* Soft pink footer */
+    background-color: #f2d1d1;
     padding: 20px;
     color: #333;
 }
 
 footer a {
     text-decoration: none;
-    color: #8f4d6d; /* Subtle pink color for links */
+    color: #8f4d6d;
     font-weight: bold;
     margin: 0 10px;
 }
 
 footer a:hover {
-    color: #d16f87; /* Darker pink color on hover */
+    color: #d16f87;
 }
 
 footer p {
     font-size: 1rem;
 }
-
-/* Mobile Responsiveness */
-@media screen and (max-width: 768px) {
-    .flex-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cafe-images {
-        flex-direction: column;
-    }
-}
-
-/* Troubleshooting Tip: Check if your website isn't showing the pink background due to caching.
-   Try clearing the browser cache or open the site in Incognito/Private mode to avoid cache issues. */
