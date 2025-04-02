@@ -1,41 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> <!-- AOS CSS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script> <!-- AOS JS -->
-    <title>Elvina Sindartha - About Me</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Elvina Sindartha - Personality Quiz</title>
 </head>
 <body>
 
-  <!-- Header Section -->
-  <header data-aos="fade-down">
-    <h1>Hi there! Welcome to My Page</h1>
-    <h2>I’m Elvina Sindartha, a Melbourne-based digital media enthusiast and Interior Design graduate with a love for the simple things in life—like enjoying a fresh cup of coffee in one of Melbourne’s many charming cafés.</h2>
+  <header>
+    <h1>Welcome to My Page!</h1>
+    <h2>Let's take a fun quiz to discover what kind of traveler or foodie you are!</h2>
   </header>
 
-  <!-- Main Content -->
   <main>
-    <div class="flex-container" data-aos="fade-up">
-      <!-- My Photo -->
-      <div id="my-photo">
-        <img src="https://raw.githubusercontent.com/esindartha/Hi-there-/main/Images/IMG_1305.jpg" alt="Elvina Sindartha" width="300">
+    <div class="quiz-container">
+      <h3>What type of traveler are you?</h3>
+
+      <form id="quizForm">
+        <div class="question">
+          <p>1. What's your ideal vacation?</p>
+          <label>
+            <input type="radio" name="question1" value="A" required> An adventurous backpacking trip.
+          </label>
+          <label>
+            <input type="radio" name="question1" value="B"> A relaxing beach holiday.
+          </label>
+          <label>
+            <input type="radio" name="question1" value="C"> Exploring new cities and cultures.
+          </label>
+          <label>
+            <input type="radio" name="question1" value="D"> Visiting off-the-beaten-path places for unique experiences.
+          </label>
+        </div>
+
+        <div class="question">
+          <p>2. What’s your idea of a perfect day?</p>
+          <label>
+            <input type="radio" name="question2" value="A" required> Hiking and exploring nature.
+          </label>
+          <label>
+            <input type="radio" name="question2" value="B"> Lounging by the pool with a cocktail.
+          </label>
+          <label>
+            <input type="radio" name="question2" value="C"> Wandering through museums and art galleries.
+          </label>
+          <label>
+            <input type="radio" name="question2" value="D"> Finding hidden gems around the city, trying new foods.
+          </label>
+        </div>
+
+        <button type="button" onclick="submitQuiz()">Submit</button>
+      </form>
+
+      <div id="result" style="display: none;">
+        <h3>Your Result:</h3>
+        <p id="resultText"></p>
       </div>
     </div>
+  </main>
 
-    <div data-aos="zoom-in">
-      <p class="intro-paragraph">
-        I’ve been on a café-hopping adventure around Melbourne lately, and I thought I’d share some of my favorite finds with you.
-      </p>
-    </div>
+  <footer>
+    <p>&copy; 2025 Elvina Sindartha</p>
+  </footer>
 
-    <!-- Café Sections -->
-    <div id="cafe1" data-aos="fade-up">
-        <h3>Café 1: Dua Bakehouse, Collingwood</h3>
-        <div class="cafe-images">
-          <img src="Images/IMG_1523.JPG" alt="Dua Bakehouse Image 1" width="400">
-          <img src="Images/IMG_1561.JPG" alt="Dua Bakehouse Image 2" width="400">
-        </div>
-    </div>
-  </
+  <script src="script.js"></script>
+
+</body>
+</html>
