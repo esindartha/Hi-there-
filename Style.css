@@ -1,150 +1,62 @@
-/* General Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Lora", serif; /* Font changed to Lora */
-    background-color: #f8d7e6; /* Subtle pink background */
-    color: #333; /* Dark grey font color */
-    text-align: center;
-    line-height: 1.6;
+  font-family: 'Lora', serif;
+  background-color: #f8d7e6;
+  color: #333;
+  text-align: center;
+  padding: 20px;
 }
 
-/* Header Section */
 header {
-    padding: 40px;
-    background-color: #f2d1d1; /* Soft pink header */
+  padding: 40px;
+  background-color: #f2d1d1;
 }
 
-/* Title and Subheader */
-header h1, header h2 {
-    color: #333; /* Dark grey color for the header text */
-    text-align: center;
-    max-width: 80%; /* Limit width to ensure alignment */
-    margin: 0 auto; /* Centering the header */
+h1, h2 {
+  color: #333;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+.quiz-container {
+  margin-top: 40px;
 }
 
-header h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    line-height: 1.4; /* Adjust line height for better readability */
+.question {
+  margin-bottom: 20px;
 }
 
-/* Main Content */
-main {
-    padding: 20px;
+label {
+  display: block;
+  margin: 5px 0;
 }
 
-.flex-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    width: 100%;
+button {
+  padding: 10px 20px;
+  background-color: #8f4d6d;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-/* Profile Image */
-#my-photo img {
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    margin-bottom: 20px;
+button:hover {
+  background-color: #d16f87;
 }
 
-/* Café Sections */
-h3 {
-    text-align: center;
-    font-size: 1.8rem;
-    color: #8f4d6d;
-    margin-top: 20px;
+#result {
+  margin-top: 30px;
+  background-color: #f2d1d1;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-/* Café Image Styling */
-.cafe-images img {
-    width: 250px;
-    border: 15px solid white;
-    margin: 10px;
-}
-
-/* Gaps Between Café Images */
-.cafe-images {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-}
-
-/* Paragraphs (For Subheader and Main Paragraph) */
-p, .intro-paragraph {
-    font-size: 1rem;
-    max-width: 80%; /* Set maximum width */
-    margin: 20px auto; /* Center-align and add space between paragraphs */
-    line-height: 1.6;
-    text-align: justify; /* Justify alignment for better readability */
-}
-
-/* Accordion Style */
-.accordion {
-    background-color: #f8d7e6;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.accordion:hover {
-    background-color: #e6c6d1;
-}
-
-.accordion-content {
-    display: none;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #f2d1d1;
-    border-radius: 5px;
-}
-
-/* Social Media Icons */
-.social-icon {
-    font-size: 30px; /* Adjust size of icons */
-    color: #8f4d6d; /* Subtle pink color */
-    margin: 0 10px; /* Add space between icons */
-    transition: color 0.3s ease; /* Smooth transition effect */
-}
-
-.social-icon:hover {
-    color: #d16f87; /* Darker pink on hover */
-}
-
-/* Footer Section */
 footer {
-    background-color: #f2d1d1;
-    padding: 20px;
-    color: #333;
-}
-
-footer a {
-    text-decoration: none;
-    color: #8f4d6d;
-    font-weight: bold;
-    margin: 0 10px;
-}
-
-footer a:hover {
-    color: #d16f87;
-}
-
-footer p {
-    font-size: 1rem;
+  margin-top: 50px;
+  background-color: #f2d1d1;
+  padding: 20px;
+  color: #333;
 }
