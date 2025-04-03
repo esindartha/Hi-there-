@@ -1,62 +1,26 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+// Function to toggle accordion content visibility
+function toggleAccordion(contentId) {
+  const content = document.getElementById(contentId);
+  
+  // Toggle the display between 'none' (hidden) and 'block' (visible)
+  if (content.style.display === "block") {
+    content.style.display = "none";
+  } else {
+    content.style.display = "block";
+  }
 }
 
-body {
-  font-family: 'Lora', serif;
-  background-color: #f8d7e6;
-  color: #333;
-  text-align: center;
-  padding: 20px;
-}
+// Function to handle the café submission form and display the result
+document.getElementById('cafeForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the form from reloading the page
 
-header {
-  padding: 40px;
-  background-color: #f2d1d1;
-}
+  // Get the user's input from the text box
+  const userCafé = document.getElementById('userCafé').value;
 
-h1, h2 {
-  color: #333;
-}
+  // Display the user's submitted café and show the thank you message
+  document.getElementById('userCaféResponse').innerText = userCafé;
+  document.getElementById('response').style.display = 'block'; // Show the response section
 
-.quiz-container {
-  margin-top: 40px;
-}
-
-.question {
-  margin-bottom: 20px;
-}
-
-label {
-  display: block;
-  margin: 5px 0;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #8f4d6d;
-  color: white;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #d16f87;
-}
-
-#result {
-  margin-top: 30px;
-  background-color: #f2d1d1;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-footer {
-  margin-top: 50px;
-  background-color: #f2d1d1;
-  padding: 20px;
-  color: #333;
-}
+  // Optionally, clear the input field after submission
+  document.getElementById('userCafé').value = '';
+});
