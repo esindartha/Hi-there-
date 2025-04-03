@@ -1,67 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <title>Elvina Sindartha - Personality Quiz</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet"> <!-- Lora font -->
+    <link rel="stylesheet" href="Style.css"> <!-- Correct path to Style.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome CDN -->
+    <title>Elvina Sindartha - About Me</title>
 </head>
 <body>
 
+  <!-- Header Section -->
   <header>
-    <h1>Welcome to My Page!</h1>
-    <h2>Let's take a fun quiz to discover what kind of traveler or foodie you are!</h2>
+    <h1>Hi there! Welcome to My Page</h1>
+    <h2>
+        I’m Elvina Sindartha, a Melbourne-based digital media enthusiast and Interior Design graduate with a love for the simple things in life—like enjoying a fresh cup of coffee in one of Melbourne’s many charming cafés.
+    </h2>
+    <p>
+        Living in Melbourne for over ten years has given me a deep appreciation for the city’s café culture, with countless spots to enjoy and discover. Whether I’m indulging in my favorite matcha or exploring new corners of the city, my love for food and design is always at the forefront. Currently, as I pursue my Master’s in Digital Media, I’m dedicated to transforming my creative ideas into tangible projects.
+    </p>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <div class="quiz-container">
-      <h3>What type of traveler are you?</h3>
-
-      <form id="quizForm">
-        <div class="question">
-          <p>1. What's your ideal vacation?</p>
-          <label>
-            <input type="radio" name="question1" value="A" required> An adventurous backpacking trip.
-          </label>
-          <label>
-            <input type="radio" name="question1" value="B"> A relaxing beach holiday.
-          </label>
-          <label>
-            <input type="radio" name="question1" value="C"> Exploring new cities and cultures.
-          </label>
-          <label>
-            <input type="radio" name="question1" value="D"> Visiting off-the-beaten-path places for unique experiences.
-          </label>
-        </div>
-
-        <div class="question">
-          <p>2. What’s your idea of a perfect day?</p>
-          <label>
-            <input type="radio" name="question2" value="A" required> Hiking and exploring nature.
-          </label>
-          <label>
-            <input type="radio" name="question2" value="B"> Lounging by the pool with a cocktail.
-          </label>
-          <label>
-            <input type="radio" name="question2" value="C"> Wandering through museums and art galleries.
-          </label>
-          <label>
-            <input type="radio" name="question2" value="D"> Finding hidden gems around the city, trying new foods.
-          </label>
-        </div>
-
-        <button type="button" onclick="submitQuiz()">Submit</button>
-      </form>
-
-      <div id="result" style="display: none;">
-        <h3>Your Result:</h3>
-        <p id="resultText"></p>
+    <div class="flex-container">
+      <!-- My Photo -->
+      <div id="my-photo">
+        <img src="https://raw.githubusercontent.com/esindartha/Hi-there-/main/Images/IMG_1305.jpg" alt="Elvina Sindartha" width="300">
       </div>
+
+      <p class="intro-paragraph">
+        I’ve been on a café-hopping adventure around Melbourne lately, and I thought I’d share some of my favorite finds with you. From the perfect flat white to mouthwatering pastries, these places have won me over, and I think you’ll love them too!
+      </p>
+
+      <!-- Café Feedback Poll -->
+      <section id="survey">
+        <h2>What’s Your Favorite Café?</h2>
+        <p>Feel free to type your favorite café name or any suggestions you have! I’d love to know where I should go next for my next café adventure.</p>
+
+        <!-- Survey Form (Text Box) -->
+        <form id="surveyForm">
+          <textarea id="cafeInput" rows="4" cols="50" placeholder="Type your favorite café here..."></textarea>
+          <button type="submit">Submit</button>
+        </form>
+
+        <!-- Result Section (will show after submission) -->
+        <div id="result" style="display: none;">
+          <h3>Thank you for your input!</h3>
+          <p>Favorite Café: <span id="userCafe"></span></p>
+        </div>
+      </section>
+
+      <!-- Tilde ~ -->
+      <div class="tilde">~</div>
+
+      <!-- Lo-fi Music Section -->
+      <div id="lofi-music">
+        <p class="intro-paragraph">
+          When I’m working on a project or studying, I love having lo-fi beats playing in the background. The mellow beats and smooth rhythms create the perfect backdrop for concentration, helping me focus on tasks without distractions. Whether I’m brainstorming ideas, working on assignments, or just need some peaceful background noise, this lo-fi video has become an essential part of my routine. One I find myself returning to often is this one:
+        </p>
+
+        <!-- Embedded YouTube Video -->
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/bBQA7yy7EBU?si=KCy_Fgp1k9ylFl_B" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+
     </div>
   </main>
 
+  <!-- Closing Paragraph -->
   <footer>
+    <p>That’s a little bit about me—just a snapshot of who I am and what I love. If you’re interested in connecting, chatting about coffee spots, or just want to say hi, feel free to reach out! I’d love to hear from you. 
+    You can connect with me through 
+    <a href="https://www.instagram.com/elvinasindartha" target="_blank" class="social-icon instagram">
+        <i class="fab fa-instagram"></i> Instagram
+    </a> or 
+    <a href="https://www.linkedin.com/in/elvina-sindartha-264845152?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social-icon linkedin">
+        <i class="fab fa-linkedin"></i> LinkedIn
+    </a>.
+    </p>
     <p>&copy; 2025 Elvina Sindartha</p>
   </footer>
 
